@@ -85,12 +85,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
         br.com.correios.bsb.sigep.master.bean.cliente.AtendeClienteService service = new br.com.correios.bsb.sigep.master.bean.cliente.AtendeClienteService();
         br.com.correios.bsb.sigep.master.bean.cliente.AtendeCliente port = service.getAtendeClientePort();
         
+        
+        
         try {
             
             String cep = txtCep.getText();
             br.com.correios.bsb.sigep.master.bean.cliente.EnderecoERP resultado = port.consultaCEP(cep);
             
-            lbinformacao.setText(resultado.getCidade() + " - " + resultado.getUf() + " - " + resultado.getBairro() + " - " + resultado.getEnd());
+            lbinformacao.setText(resultado.getCidade() + " - " + resultado.getUf() + " - " + resultado.getBairro() + " - " + resultado.getEnd() + " - " + resultado.getComplemento2());
                         
             
         } 
